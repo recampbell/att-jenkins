@@ -1,3 +1,3 @@
 FROM jess/zsh
-ADD allthehings.sh /allthethings.sh
+ADD allthethings.sh /allthethings.sh
 CMD zsh allthethings.sh
