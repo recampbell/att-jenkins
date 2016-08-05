@@ -1,11 +1,11 @@
 
 node ("docker-cloud") {
     checkout scm
-    sh "ps -ef"
-    docker.image("jess/zsh").inside {
-        sh 'ps -ef'
-        sh "ls -la"
-        sh "zsh allthethings.sh"
+    def attImage = docker.build 'allthethings:snapshot'
+    
+    attImage.inside {
+        sh 'ls -l /'
+        sh 'zsh /allthethings.sh'
     }
     
 }
