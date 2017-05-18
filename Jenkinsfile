@@ -1,5 +1,3 @@
-@Library('github.com/recampbell/zsh-pipeline') import recampbell.zsh.Zsh.*;
-
 pipeline {
   agent {
     docker {
@@ -10,7 +8,7 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-	 testZsh('allthethings.sh')
+        sh 'zsh -n allthethings.sh'
       }
     }
     stage('test') {
