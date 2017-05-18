@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-        library 'github.com/recampbell/zsh-pipeline' import recampbell.zsh.Zsh
+        library 'github.com/recampbell/zsh-pipeline' 
+	import recampbell.zsh.Zsh
 	testZsh 'allthethings.sh'
       }
     }
