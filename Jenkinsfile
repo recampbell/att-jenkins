@@ -1,5 +1,5 @@
 @Library('github.com/recampbell/zsh-pipeline')
-import recampbell.zsh.Zsh
+import recampbell.zsh.Zsh.*;
 
 pipeline {
   agent {
