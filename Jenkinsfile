@@ -13,7 +13,17 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'zsh allthethings.sh'
+        parallel(
+          "test": {
+            sh 'zsh allthethings.sh'
+            
+          },
+          "deploy": {
+            echo 'Deploying'
+            sleep 10
+            
+          }
+        )
       }
     }
     stage('archive') {
