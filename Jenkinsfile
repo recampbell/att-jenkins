@@ -19,6 +19,7 @@ pipeline {
             
           },
           "deploy": {
+	    milestone "deploy"
             echo 'Deploying'
             sleep 10
             
