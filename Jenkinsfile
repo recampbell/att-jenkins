@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-	 testZsh 'allthethings.sh'
+	 recampbell.zsh.Zsh.testZsh 'allthethings.sh'
       }
     }
     stage('test') {
