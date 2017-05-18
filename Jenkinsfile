@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'jess/zsh'
+    }
+    
+  }
   stages {
     stage('compile') {
       steps {
