@@ -16,5 +16,10 @@ pipeline {
         sh 'zsh allthethings.sh'
       }
     }
+    stage('archive') {
+      steps {
+        archiveArtifacts 'allthethings.sh'
+      }
+    }
   }
 }
