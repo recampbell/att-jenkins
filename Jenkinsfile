@@ -14,6 +14,7 @@ pipeline {
     stage ("test") {
       steps {
         sh 'zsh allthethings.sh'
+      } 
     }
     stage ("deploy") {
       steps {
@@ -21,6 +22,7 @@ pipeline {
 	milestone 1
         echo 'Deploying'
         sleep 10
+      }
     }
 
     stage('archive') {
@@ -28,5 +30,5 @@ pipeline {
         archiveArtifacts 'allthethings.sh'
       }
     }
-  }
+ }
 }
