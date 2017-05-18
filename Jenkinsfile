@@ -11,5 +11,10 @@ pipeline {
         sh 'zsh -n allthethings.sh'
       }
     }
+    stage('test') {
+      steps {
+        sh 'zsh allthethings.sh'
+      }
+    }
   }
 }
