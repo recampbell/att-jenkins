@@ -20,6 +20,8 @@ pipeline {
       steps {
         sh 'zsh allthethings.sh'
 	milestone 1
+	lock "staging"
+	milestone 2
         echo 'Deploying'
         sleep 60
       }
