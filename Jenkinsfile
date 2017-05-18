@@ -10,23 +10,19 @@ pipeline {
       steps {
         sh 'zsh -n allthethings.sh'
       }
-    }
-    stage('test') {
+    } 
+    stage ("test") {
       steps {
-        parallel(
-          "test": {
-            sh 'zsh allthethings.sh'
-            
-          },
-          "deploy": {
-	    milestone 1
-            echo 'Deploying'
-            sleep 10
-            
-          }
-        )
-      }
+        sh 'zsh allthethings.sh'
     }
+    stage ("deploy") {
+      steps {
+        sh 'zsh allthethings.sh'
+	milestone 1
+        echo 'Deploying'
+        sleep 10
+    }
+
     stage('archive') {
       steps {
         archiveArtifacts 'allthethings.sh'
