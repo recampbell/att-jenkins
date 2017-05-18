@@ -8,7 +8,10 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-        sh 'zsh -n allthethings.sh'
+        catchError() {
+          sh 'zsh -n allthethings.sh'
+        }
+        
       }
     }
     stage('test') {
