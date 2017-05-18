@@ -1,4 +1,4 @@
-library 'github.com/recampbell/zsh-pipeline' 
+@Library('github.com/recampbell/zsh-pipeline')
 import recampbell.zsh.Zsh
 
 pipeline {
