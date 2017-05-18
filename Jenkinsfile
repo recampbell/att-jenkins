@@ -8,10 +8,7 @@ pipeline {
   stages {
     stage('compile') {
       steps {
-        catchError() {
-          sh 'zsh -n allthethings.sh'
-        }
-        
+        library 'github.com/recampbell/zsh-pipeline'
       }
     }
     stage('test') {
