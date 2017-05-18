@@ -21,7 +21,7 @@ pipeline {
         sh 'zsh allthethings.sh'
 	milestone 1
         echo 'Deploying'
-        sleep 10
+        sleep 60
       }
     }
 
