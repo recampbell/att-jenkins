@@ -7,6 +7,7 @@
 # Licensed under WTFPL http://sam.zoy.org/wtfpl/
 #
 
+
 pur=$(tput setaf 5)    # Purple
 ylw=$(tput setaf 3)    # Yellow
 txtrst=$(tput sgr0)       # Text reset
