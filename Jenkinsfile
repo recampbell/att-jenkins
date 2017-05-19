@@ -1,14 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'jess/zsh'
+    }
+    
+  }
   stages {
     stage('compile') {
       steps {
-        sh 'bash -n allthethings.sh'
+        sh 'zsh -n allthethings.sh'
       }
     }
     stage('test') {
       steps {
-        sh 'sh allthethings.sh'
+        sh 'zsh allthethings.sh'
       }
     }
     stage('archive') {
