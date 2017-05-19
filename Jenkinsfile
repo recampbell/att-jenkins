@@ -6,5 +6,15 @@ pipeline {
         sh 'bash -n allthethings.sh'
       }
     }
+    stage('test') {
+      steps {
+        sh 'sh allthethings.sh'
+      }
+    }
+    stage('archive') {
+      steps {
+        archiveArtifacts 'allthethings.sh'
+      }
+    }
   }
 }
